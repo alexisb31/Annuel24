@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>catalogue</title>
+  <link rel="stylesheet" href="/public/liste_pdf/img/style.css">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<a href="/public/accueil/accueil.html" class="back-button">
+  <img src="/public/css/imgfiles/retour.png" alt="Bouton de retour">
+</a> 
+<div class="container">
+  <img src="/public/accueil/images/logofol.png" alt="Logo du site" class="logo">
+  <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+    <label for="direction"></label><br>
+    <select id="profil" name="profil" required>
+      <% profils.forEach(function(profil) { %>
+        <option value="<%= profil.id_profil %>"><%= profil.nom %></option>
+      <% }); %>
+    </select>
+    <select id="scenario" name="scenario" required>
+      <% scenarios.forEach(function(scenario) { %>
+        <option value="<%= scenario.id_scenario %>"><%= scenario.nom %></option>
+      <% }); %>
+    </select>
+    <select id="direction" name="direction" required>
+      <% directions.forEach(function(direction) { %>
+        <option value="<%= direction.id_direction %>"><%= direction.nom %></option>
+      <% }); %>
+    </select>
+    <label for="file"></label><br>
+    <input type="file" id="file" name="file" accept=".pdf" required><br>
+    <input type="submit" value="Upload">
+  </form>
+      <div class="drops">
+        <div class="drop drop-1"></div>
+        <div class="drop drop-2"></div>
+        <div class="drop drop-3"></div>
+        <div class="drop drop-4"></div>
+        <div class="drop drop-5"></div>
+      </div>
+    </div>
+    <div id="pdfContainer">
+    </div>
+    <script>
+    var isAdmin = 1 ; 
+    
+    window.onload = function() {
+      if (isAdmin) {
+        document.getElementById('uploadForm').style.display = 'block';
+      }
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>

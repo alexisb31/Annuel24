@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>inscription</title>
+  <link rel="stylesheet" href="/public/css/img/style.css">
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet"> 
+<div class="container">
+  <img src="/public/accueil/images/logofol.png" alt="Logo du site" class="logo">
+  <form action="/inscription"  method="POST" class="needs-validation" novalidate>
+  <p>Bienvenue</p>
+  <div>
+    <input type="text" name="username" id="username" placeholder="username" required>
+  </div>
+  <div>
+    <input type="email" name="email" id="email" placeholder="email" required>
+  </div>
+  <div>
+    <input type="password" name="password" id="password" placeholder="password" required>
+  </div>
+  <div>
+    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword" placeholder="confirmPassword" required>
+  </div>
+  <div>
+    <input type="submit" value="S'inscrire">
+  </div>
+</form>
+  <div class="drops">
+    <div class="drop drop-1"></div>
+    <div class="drop drop-2"></div>
+    <div class="drop drop-3"></div>
+    <div class="drop drop-4"></div>
+    <div class="drop drop-5"></div>
+  </div>
+</div>
+ 
+<script src="main.js"></script>
+</body>
+</html>

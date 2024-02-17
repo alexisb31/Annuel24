@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>vos documentations disponibles </title>
+  <link rel="stylesheet" href="css/imgfiles/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+  <a href="/public/accueil/accueil.html" class="back-button">
+    <img src="/public/css/imgfiles/retour.png" alt="Bouton de retour">
+  </a>
+  <select id="changeLanguage">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+    <option value="es">Español</option>
+    <option value="de">Deutsch</option>
+  </select>
+  <a href="/files" class="refresh-icon">
+    <img src="/public/css/imgfiles/refresh-svgrepo-com.svg" alt="Refresh Icon">
+  </a>
+  <form class="form" action="/search" method="POST">
+    <label for="profile-type"> catégrorie :</label>
+    <select id="profile-type" name="id_profil">
+      <option value="1">leçon</option>
+      <option value="2">conjugaison</option>
+      <option value="3">grammaire</option>
+      <option value="4">Vidéo appli</option>
+    </select>
+  
+    <label for="scenario-type"> niveau :</label>
+    <select id="scenario-type" name="id_scenario">
+      <option value="1">débutant 1 </option>
+      <option value="2">intermédiaire 2</option>
+      <option value="3">confirmé 3</option>
+      <option value="4">Pur Français 4 </option>
+    </select>
+  
+    <button type="submit">Rechercher</button>
+  </form>
+ 
+  <div class="container">
+    <img src="/public/accueil/images/logofol.png"  alt="Logo du site" class="logo">
+    <% if (typeof filesByDirection !== 'filtrage') { %>
+      <% for (let direction in filesByDirection) { %>
+        <h2><%= direction %></h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>nom du fichier</th>
+              <th>type</th>
+              <th>niveau</th>
+              <th>Lien</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% filesByDirection[direction].forEach(file => { %>
+              <tr>
+                <td><%= file.name %></td>
+                <td><%= file.profil_nom %></td>
+                <td><%= file.scenario_nom %></td>
+                <td><a href="<%= file.url %>" target="_blank">Voir le fichier</a></td>
+              </tr>
+            <% }) %>
+          </tbody>
+        </table>
+      <% } %>
+    <% } %>
+  </div>
+  <script src="https://unpkg.com/i18next@19.9.2/dist/umd/i18next.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script>
+    i18next.init({
+      lng: 'fr', 
+      resources: {
+
+        en: {
+          translation: {
+        "Type de profil": "Profile type",
+        "DEV": "DEV",
+        "OPS": "OPS",
+        "Metiers": "Jobs",
+        "Type de scénario": "Scenario type",
+        "ERASER AWS": "ERASER AWS",
+        "Rançongiciel": "Ransomware",
+        "Rechercher": "Search",
+        "nom du fichier": "file name",
+        "profil": "profile",
+        "scénarios": "scenarios",
+        "Lien": "Link",
+        "Voir le fichier": "See the file"
+          }
+        },
+        fr: {
+          translation: {
+         "Type de profil": "Type de profil",
+        "DEV": "DEV",
+        "OPS": "OPS",
+        "Metiers": "Metiers",
+        "Type de scénario": "Type de scénario",
+        "ERASER AWS": "ERASER AWS",
+        "Rançongiciel": "Rançongiciel",
+        "Rechercher": "Rechercher",
+        "nom du fichier": "nom du fichier",
+        "profil": "profil",
+        "scénarios": "scénarios",
+        "Lien": "Lien",
+        "Voir le fichier": "Voir le fichier"
+          }
+        },
+        es: {
+          translation: {
+             
+          }
+        },
+        de: {
+          translation: {
+             
+          }
+        }
+      }
+    }, function(err, t) {
+      if (err) {
+        console.log('Erreur lors de l\'initialisation de i18next:', err);
+        return;
+      }
+  
+      document.getElementById('changeLanguage').addEventListener('change', function() {
+        var lang = this.value;
+        i18next.changeLanguage(lang);
+      });
+  
+      i18next.on('languageChanged', function() {
+        document.querySelectorAll('[data-i18n]').forEach(function(element) {
+          var key = element.getAttribute('data-i18n');
+          var translation = i18next.t(key);
+          element.textContent = translation;
+        });
+      });
+    });
+  </script>
+</body>
+</html>

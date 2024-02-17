@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <!-- mobile metas -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+      <!-- site metas -->
+      <title>FrenchOpenLearn</title>
+      <meta name="keywords" content="">
+      <meta name="description" content="">
+      <meta name="author" content="">
+      <!-- bootstrap css -->
+      <link rel="stylesheet" href="css/bootstrap.min.css">
+      <!-- style css -->
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Responsive-->
+      <link rel="stylesheet" href="css/responsive.css">
+      <!-- fevicon -->
+      <link rel="icon" href="images/fevicon.png" type="image/gif" />
+      <!-- Scrollbar Custom CSS -->
+      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+      <!-- Tweaks for older IEs-->
+      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+   </head>
+   <body class="main-layout">
+      <div class="loader_bg">
+         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+      </div>
+      <div id="mySidepanel" class="sidepanel">
+         <select id="changeLanguage" LANGUAGE>
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="de">Deutsch</option>
+          </select>
+         <a href="javascript:void(0)" class="openbtn" onclick="openNav()"></a>
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+         <a href="/files" data-i18n="your-documents">Vos documents </a>
+         <a href="#we_Do" data-i18n="our-actions">nos actions </a>
+         <a href="/liste_pdf" data-i18n="upload">upload</a> 
+      </div>
+      <header>
+         <div class="header">
+            <div class="container-fluid">
+               <div class="row">
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col logo_section">
+                     <div class="full">
+                        <div class="center-deskk">
+                           <div class="logo">
+                              <a href="/files"><img src="/public/accueil/images/logofol.png" alt="#" /></a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
+                     <div class="right_bottun">
+                        <button class="openbtn" onclick="openNav()"><img src="images/menu_icon.png" alt="#"/> </button> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </header>
+      <section class="banner_main">
+         <div id="banner1" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+               <li data-target="#banner1" data-slide-to="0" class="active"></li>
+               <li data-target="#banner1" data-slide-to="1"></li>
+               <li data-target="#banner1" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+               <div class="carousel-item active">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1 data-i18n="banner-heading"></h1>
+                           <a  class="read_more" href="/files" data-i18n="your-documents">vos documents</a>                      
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="carousel-item">
+                  <div class="container">
+                     <div class="carousel-caption">
+                        <div class="text-bg">
+                           <h1 data-i18n="banner-heading"></h1>
+                           <a class="read_more" href="/files" data-i18n="your-documents">vos documents</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="carousel-control-prev" href="#banner1" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            </a>
+            <a class="carousel-control-next" href="#banner1" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            </a>
+         </div>
+      </section>
+      <div id="about" class="about">
+         <div class="container">
+            <div class="row ">
+               <div class="col-md-5">
+                  <div class="roww">
+                     <div class="col-md-12">
+                        <div class="about-section">
+                           <h2 data-i18n="about">A propos</h2>
+                           <p data-i18n="about-description">Notre application a été créée dans le but de rendre l'apprentissage du français accessible à tous, en particulier aux étrangers qui souhaitent maîtriser la langue de manière gratuite et flexible.</p>
+                         </div>
+                     </div>
+                     <div class="col-md-12">
+                     </div>
+                  </div>
+               </div>
+               <div class="col-md-7">
+                  <div class="about_right">
+                     <figure><img src="/public/accueil/images/apropos.jpg" alt="#"/></figure>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="software">    
+               <div class="deuxpart">
+                  <div class="titlepage">
+                     <h2 data-i18n="our-resources">nos ressources</h2>
+                     <p data-i18n="resources-description">Découvrez notre approche d'apprentissage du français unique, avec des cours diversifiés comprenant des vidéos captivantes, des leçons textuelles approfondies et des exercices interactifs pour renforcer vos compétences linguistiques.</p>
+                     <a class="read_more" href="/files" data-i18n="procedures">vos supports</a>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div id="we_Do" class="we_do">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage">
+                     <h2 data-i18n="what-we-do">ce que nous faisons</h2>
+                     <p data-i18n="what-we-do-description"> Nous nous engageons à offrir une expérience d'apprentissage du français exceptionnelle en fournissant des cours de haute qualité, accessibles gratuitement à tous les apprenants du monde entier. </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row">
+               <div class="col-md-4">
+                   <div id="hover_color" class="we_box">
+                       <span>1</span>
+                       <h3 data-i18n="exploration">Exploration</h3>
+                       <p data-i18n="exploration-description">Pendant toute l'année, nous explorons les meilleures méthodes d'enseignement du français, en identifiant les défis potentiels et en recherchant des solutions innovantes.</p>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                   <div id="hover_color" class="we_box">
+                       <span>2</span>
+                       <h3 data-i18n="course-development">Élaboration de Cours</h3>
+                       <p data-i18n="course-development-description">Après avoir consulté les apprenants et les experts en linguistique, nous élaborons des cours qui répondent aux besoins spécifiques, en évaluant la complexité et le temps nécessaire à la maîtrise du français.</p>
+                   </div>
+               </div>
+               <div class="col-md-4">
+                  <div id="hover_color" class="we_box">
+                      <span>3</span>
+                      <h3 data-i18n="method-design">Conception de Méthodes</h3>
+                      <p data-i18n="method-design-description">À chaque étape du processus d'apprentissage, nous concevons des méthodes efficaces pour garantir une progression rapide et une compréhension approfondie de la langue française.</p>
+                  </div>
+              </div>
+               </div>
+           </div>
+           
+      </div>
+    
+      <script src="https://unpkg.com/i18next@19.9.2/dist/umd/i18next.min.js"></script>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/popper.min.js"></script>
+      <script src="js/bootstrap.bundle.min.js"></script>
+      <script src="js/jquery-3.0.0.min.js"></script>
+      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+      <script src="js/custom.js"></script>
+      <script>
+      function openNav() {
+      document.getElementById("mySidepanel").style.width = "250px";
+      }
+      
+      function closeNav() {
+      document.getElementById("mySidepanel").style.width = "0";
+      }
+      </script>
+     <script>
+      function openNav() {
+        document.getElementById("mySidepanel").style.width = "250px";
+      }
+    
+      function closeNav() {
+        document.getElementById("mySidepanel").style.width = "0";
+      }
+    </script>
+   <script>
+      i18next.init({
+        lng: 'fr', 
+        resources: {
+          en: {
+            translation: {
+          "close": "Close",
+          "your-documents": "Your Documents",
+          "our-actions": "Our Actions",
+          "upload": "Upload",
+          "banner-heading": "Learn French with us",
+          "about": "About",
+          "about-description": "Our application was created with the aim of making learning French accessible to everyone, especially foreigners who wish to master the language in a free and flexible way.",
+          "our-resources": "Our Resources",
+          "resources-description": "Discover our unique approach to learning French, with diversified courses including captivating videos, in-depth textual lessons, and interactive exercises to reinforce your language skills.",
+          "procedures": "our support",
+          "what-we-do": "What We Do",
+          "what-we-do-description": "We are committed to delivering an exceptional French learning experience by providing high-quality courses, freely accessible to all learners worldwide.",
+          "exploration": "Exploration",
+          "exploration-description": "Throughout the year, we explore the best methods of teaching French, identifying potential challenges and seeking innovative solutions.",
+          "course-development": "Course Development",
+          "course-development-description": "After consulting learners and linguistics experts, we develop courses that meet specific needs, assessing the complexity and time required to master French.",
+          "method-design": "Method Design",
+          "method-design-description": "At each step of the learning process, we design effective methods to ensure rapid progression and a deep understanding of the French language.",
+            }
+          },
+          fr: {
+            translation: {
+               "close": "Fermer",
+               "your-documents": "Vos documents",
+               "our-actions": "Nos actions",
+               "upload": "upload",
+               "banner-heading": "Apprenez le français avec nous",
+               "about": "À propos",
+               "about-description": "Notre application a été créée dans le but de rendre l'apprentissage du français accessible à tous, en particulier aux étrangers qui souhaitent maîtriser la langue de manière gratuite et flexible.",
+               "our-resources": "Nos ressources",
+               "resources-description": "Découvrez notre approche unique pour apprendre le français, avec des cours diversifiés qui comprennent des vidéos captivantes, des leçons textuelles approfondies et des exercices interactifs pour renforcer vos compétences linguistiques.",
+               "procedures": "vos supports ",
+               "what-we-do": "Ce que nous faisons",
+               "what-we-do-description": "Nous nous engageons à offrir une expérience exceptionnelle d'apprentissage du français en fournissant des cours de haute qualité, accessibles gratuitement à tous les étudiants du monde entier.",
+               "exploration": "Exploration",
+               "exploration-description": "Tout au long de l'année, nous explorons les meilleures méthodes d'enseignement du français, identifions les défis potentiels et recherchons des solutions innovantes.",
+               "course-development": "Développement du cours",
+               "course-development-description": "Après avoir consulté les étudiants et les experts en linguistique, nous développons des cours qui répondent à des besoins spécifiques, en évaluant la complexité et le temps requis pour maîtriser le français.",
+               "method-design" : "Conception de Méthodes", 
+               "method-design-description":"À chaque étape du processus d'apprentissage, nous concevons des méthodes efficaces pour garantir une progression rapide et une compréhension approfondie de la langue française.",
+            }
+          },
+          es: {
+            translation: {
+               "close": "Cerrar",
+               "your-documents": "Tus documentos",
+               "our-actions": "Nuestras acciones",
+               "upload": "Subir",
+               "banner-heading": "Aprende francés con nosotros",
+               "about": "Acerca de",
+               "about-description": "Nuestra aplicación fue creada con el objetivo de hacer que el aprendizaje del francés sea accesible para todos, especialmente para los extranjeros que desean dominar el idioma de manera gratuita y flexible.",
+               "our-resources": "Nuestros recursos",
+               "resources-description": "Descubre nuestro enfoque único para aprender francés, con cursos diversificados que incluyen videos cautivadores, lecciones textuales en profundidad y ejercicios interactivos para reforzar tus habilidades lingüísticas.",
+               "procedures": "Procedimientos",
+               "what-we-do": "Lo que hacemos",
+               "what-we-do-description": "Estamos comprometidos a brindar una experiencia excepcional de aprendizaje del francés al proporcionar cursos de alta calidad, accesibles gratuitamente para todos los estudiantes en todo el mundo.",
+               "exploration": "Exploración",
+               "exploration-description": "A lo largo del año, exploramos los mejores métodos de enseñanza del francés, identificamos posibles desafíos y buscamos soluciones innovadoras.",
+               "course-development": "Desarrollo del curso",
+               "course-development-description": "Después de consultar a los estudiantes y expertos en lingüística, desarrollamos cursos que satisfacen necesidades específicas, evaluando la complejidad y el tiempo requerido para dominar el francés.",
+               "method-design": "Diseño del método",
+               "method-design-description": "En cada paso del proceso de aprendizaje, diseñamos métodos efectivos para garantizar una progresión rápida y una comprensión profunda del idioma francés."
+            }
+          },
+          de: {
+            translation: {
+               "close": "Schließen",
+               "your-documents": "Ihre Dokumente",
+               "our-actions": "Unsere Aktionen",
+               "upload": "Hochladen",
+               "banner-heading": "Lernen Sie Französisch mit uns",
+               "about": "Über",
+               "about-description": "Unsere Anwendung wurde mit dem Ziel erstellt, das Erlernen des Französischen für alle zugänglich zu machen, insbesondere für Ausländer, die die Sprache kostenlos und flexibel beherrschen möchten.",
+               "our-resources": "Unsere Ressourcen",
+               "resources-description": "Entdecken Sie unseren einzigartigen Ansatz zum Erlernen des Französischen, mit vielfältigen Kursen, die fesselnde Videos, tiefgehende Textlektionen und interaktive Übungen zur Stärkung Ihrer Sprachkenntnisse beinhalten.",
+               "procedures": "Verfahren",
+               "what-we-do": "Was wir tun",
+               "what-we-do-description": "Wir sind bestrebt, ein außergewöhnliches Französischlernerlebnis zu bieten, indem wir hochwertige Kurse anbieten, die für alle Schüler weltweit kostenlos zugänglich sind.",
+               "exploration": "Erforschung",
+               "exploration-description": "Im Laufe des Jahres erforschen wir die besten Methoden zum Unterrichten des Französischen, identifizieren mögliche Herausforderungen und suchen nach innovativen Lösungen.",
+               "course-development": "Kursentwicklung",
+               "course-development-description": "Nach Rücksprache mit Studenten und Linguistikexperten entwickeln wir Kurse, die spezifische Bedürfnisse erfüllen, indem wir die Komplexität und die zum Beherrschen des Französischen erforderliche Zeit bewerten.",
+               "method-design": "Methodendesign",
+               "method-design-description": "Bei jedem Schritt des Lernprozesses entwerfen wir effektive Methoden, um einen schnellen Fortschritt und ein tiefes Verständnis der französischen Sprache zu gewährleisten."
+            }
+          }
+        }
+      }, function(err, t) {
+        if (err) {
+          console.log('Erreur lors de l\'initialisation de i18next:', err);
+          return;
+        }
+    
+        document.getElementById('changeLanguage').addEventListener('change', function() {
+          var lang = this.value;
+          i18next.changeLanguage(lang);
+        });
+    
+        i18next.on('languageChanged', function() {
+          document.querySelectorAll('[data-i18n]').forEach(function(element) {
+            var key = element.getAttribute('data-i18n');
+            var translation = i18next.t(key);
+            element.textContent = translation;
+          });
+        });
+      });
+    </script>
+
+   </body>
+</html>
+

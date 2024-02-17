@@ -1,0 +1,216 @@
+body {
+  background-color:  #2b2455 !important;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1em;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1em;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+.container2 {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 1em;
+  border-radius: 20px;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 2em;
+}
+
+@media (max-width: 768px) {
+  .container2 {
+    width: 100%;
+    padding: 1em;
+  }
+}
+
+.table {
+  width: 100%;
+  overflow-x: auto;
+  background: transparent;
+  color: #1f256b;
+  text-shadow: none;
+  font-family: 'Roboto', sans-serif;
+  transition: all 0.3s ease-in-out;
+  margin-top: 20%; /* Réduction de l'espacement au-dessus de la table */
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.table:hover {
+  transform: scale(1.02);
+}
+
+.table td {
+  
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: none;
+  font-weight: 500;
+  padding: 15px;
+}
+
+.table th {
+  background: #051045e5;
+
+  color: white;
+}
+
+.table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.table tr:nth-child(odd) {
+  background-color: #e6e6e6;
+}
+
+.logo {
+  max-width: 30%; 
+  height: auto;
+  margin-bottom: 60px;
+  border-radius: 5%; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.suggestions a {
+  color: #be2525;
+  text-decoration: none;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.suggestions a:hover {
+  background-color: #f5f5f5;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center!important;
+  justify-content: center!important;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  width: 30%; 
+  position: static; 
+  margin: 10px auto 50px; 
+  background:  #051045;
+  animation: formAnimation 2s ease-in-out;
+  z-index: 1000; 
+}
+@keyframes formAnimation {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+label {
+  color: #fff;
+}
+
+form select {
+  padding: 10px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  font-size: 16px;
+}
+
+form select:focus {
+  outline: none;
+  border-color: #719ECE;
+}
+
+form button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background: linear-gradient(45deg, #f6f5f6, #051045);
+  color: white;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background: linear-gradient(45deg, #f6f5f6, #051045);
+}
+
+/* Ajout de styles pour réduire l'espacement */
+h2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.table {
+  margin-top: 0;
+}
+
+.refresh-icon {
+  height: 30px;
+  width: auto;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.refresh-icon img {
+  height: 30px;
+  width: auto;
+}
